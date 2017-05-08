@@ -1,0 +1,19 @@
+MenuHomeComponent{
+	ion-header{
+		&:after {
+			background-image: none !important;
+		}
+	}
+	ion-tabs{
+		.tab-highlight{
+			height: 3px !important;
+			background-color : map-get($colors , 'secondary') !important;
+		}
+		.tab-button.has-title-only{
+			padding : 0px !important;
+		}
+		.tab-button{
+			min-height: 2.6em !important;
+		}
+	}
+}

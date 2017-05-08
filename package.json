@@ -35,10 +35,10 @@
   },
   "cordovaPlugins": [
     "cordova-plugin-whitelist",
-    "cordova-plugin-statusbar",
     "cordova-plugin-console",
-    "cordova-plugin-splashscreen",
+    "cordova-plugin-statusbar",
     "cordova-plugin-device",
+    "cordova-plugin-splashscreen",
     "ionic-plugin-keyboard"
   ],
   "cordovaPlatforms": [
@@ -49,5 +49,5 @@
       "locator": "ios"
     }
   ],
-  "description": "Bellhapp Mock: An Ionic project"
+  "description": "bellhapp: An Ionic project"
 }

@@ -1,0 +1,48 @@
+MenuSectionsComponent{
+	.scroll-content{
+		z-index : inherit !important;
+	}
+	ion-header{
+		ion-grid{
+			padding: 0px !important;
+		}
+		ion-row{
+			padding: 0px !important;
+		}
+		ion-col{
+			padding: 0px !important;
+		}
+		.toolbar-title{
+			white-space: pre-wrap !important;
+		}
+		button{
+			margin : 0px !important;
+		}
+	}
+	.darkerBar{
+		background-color: #353C3F;
+		color : white;
+		padding : 8px;
+	}
+	ion-item{
+		height: 64px;
+		ion-img{
+			height: 64px !important;
+			width: 64px !important;
+		}
+	}
+	ion-avatar{
+		margin : 0px !important;
+		min-height: 56px;
+		min-width: 56px;
+		border-radius: none !important;
+		img{
+			
+			border-radius: 1% !important;
+		}
+		ion-img{
+			height: 56px !important;
+			width: 56px !important;	
+		}
+	}
+}

@@ -1,0 +1,19 @@
+<ion-content>
+	<ion-grid no-padding class="v-center-grid justify">
+		<ion-row *ngFor="let item of list" [ngStyle]="{'background' : item.bg}" (click)="goToMenuSectionComponent(item)">
+			<ion-col>
+				<div class="spaceFiller">
+					<ion-grid class="v-center-grid">
+						<ion-row>
+							<ion-col>
+								<h1 no-margin text-center>
+									{{item.name}}
+								</h1>
+							</ion-col>
+						</ion-row>
+					</ion-grid>
+				</div>
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+</ion-content>

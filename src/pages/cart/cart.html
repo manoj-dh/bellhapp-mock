@@ -1,0 +1,27 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <button ion-button icon-only clear color="light" item-right (click)="dismissPage()">
+            <ion-icon name="ios-arrow-down"></ion-icon>
+        </button>
+    </ion-toolbar>
+    <ion-toolbar color="primary">
+        <ion-title word-wrap>Review Orders (0)</ion-title>
+        <ion-buttons end>
+            <button ion-button icon-only clear color="light" (click)="openCartScreen()">
+				<ion-icon name="cart"></ion-icon>
+			</button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <div class="cart-img text-center">
+        <img src="assets/images/cart-image.jpg" alt="">
+    </div>
+    <div class='cart-content'>
+        <h2>Start Your Order</h2>
+        <p>As you add items, they'll appear here. You'll have a chance to review before placing order.</p>
+        <button mode="ios" round outline ion-button color="secondary" >
+            Add Item
+        </button>
+    </div>
+</ion-content>

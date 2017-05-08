@@ -1,0 +1,56 @@
+<ion-header>
+	<ion-toolbar color="primary">
+		<ion-grid>
+			<ion-row>
+				<ion-col>
+					<button ion-button icon-only clear color="light" item-right (click)="dismissPage()">
+						<ion-icon name="ios-arrow-down"></ion-icon>
+					</button>
+				</ion-col>
+				<ion-col col-8>
+					<div class="spaceFiller">
+						<ion-grid class="v-center-grid">
+							<ion-row>
+								<ion-col>
+									<ion-title word-wrap text-center>{{title}}</ion-title>
+								</ion-col>
+							</ion-row>
+						</ion-grid>
+					</div>
+				</ion-col>
+				<ion-col text-right>
+					<button icon-only ion-button color="light" clear>
+						<ion-icon name="ios-search"></ion-icon>
+					</button>
+					<div></div>
+					<button ion-button icon-only clear color="light" (click)="openCartScreen()">
+						<ion-icon name="cart"></ion-icon>
+					</button>
+				</ion-col>
+			</ion-row>
+		</ion-grid>
+	</ion-toolbar>
+</ion-header>
+<ion-content scroll-parent>
+	<ng-container  *ngFor="let category of myList">
+		<div class="scroll-heading-start"></div>
+		<div class="scroll-heading">
+			<div class='darkerBar'>
+				{{category.heading}}
+			</div>
+		</div>
+		<div class="scroll-heading-end"></div>
+		<div scroll-test>
+			<ion-list no-margin>
+				<ion-item no-padding *ngFor="let item of category.items" (click)="goToDetailPage()">
+					<ion-img item-left [src]="item.image" item-left></ion-img>
+					<h2>{{item.title}}</h2>
+					<p>
+						{{item.description}}
+					</p>
+					<ion-icon item-right name="ios-arrow-forward" color="secondary"></ion-icon>
+				</ion-item>
+			</ion-list>
+		</div>
+	</ng-container>
+</ion-content>

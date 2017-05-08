@@ -5,14 +5,27 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
+import { signalPageComponent } from '../pages/SignalPage/SignalPage';
+import { MenuHomeComponent } from '../pages/MenuHome/MenuHome';
+import { listComponent } from '../pages/List/List';
+import { recentItemComponent } from '../pages/Recent/Recent';
+import { MenuSectionsComponent } from '../pages/MenuSection/MenuSection';
+import { cartComponent } from '../pages/cart/cart';
+import { detailComponent } from '../pages/detail/detail';
 
-import { Restaurant } from '../providers/restaurant';
+import { scrollParent } from '../directive/scroll';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    signalPageComponent,
+    MenuHomeComponent,
+    listComponent,
+    recentItemComponent,
+    MenuSectionsComponent,
+    scrollParent,
+    detailComponent,
+    cartComponent
   ],
   imports: [
     BrowserModule,
@@ -21,13 +34,18 @@ import { Restaurant } from '../providers/restaurant';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    signalPageComponent,
+    MenuHomeComponent,
+    listComponent,
+    recentItemComponent,
+    MenuSectionsComponent,
+    cartComponent,
+    detailComponent
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
-    Restaurant
+    {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
 export class AppModule {}

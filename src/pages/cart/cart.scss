@@ -1,0 +1,25 @@
+cartComponent{
+	$blue : #353C3F;
+	.cart-img{
+		text-align: center;
+    	margin: 12% 0;
+		img{
+			max-width: 100%;
+		}
+	}
+	.cart-content{
+		padding: 0 25px;
+		h2{			
+			color: $blue;
+			font-size: 25px;
+			line-height: 1;
+			margin: 0 0 10px;
+		}
+		p{
+			color: $blue;
+			font-size: 16px;
+		    line-height: 1.5em;
+		    margin: 0 0 20px;
+		}
+	}
+}

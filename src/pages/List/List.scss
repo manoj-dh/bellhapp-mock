@@ -1,0 +1,19 @@
+listComponent{
+	.v-center-grid.justify{
+		> ion-row{
+			flex: 1;
+		}
+		*{
+			padding : 0px !important;
+		}
+		ion-col{
+			color : white !important;
+		}
+	}
+	.spaceFiller{
+		background-color : rgba(0, 0, 0, 0.6);
+		h1{
+			font-weight: 400;
+		}
+	}
+}

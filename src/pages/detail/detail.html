@@ -1,0 +1,55 @@
+<ion-content>
+	<button ion-button clear icon-only color="light" class="btnTop" (click)="dismissView()">
+		<ion-icon name="ios-arrow-down"></ion-icon>
+	</button>
+	<img src="assets/images/detail.jpg" />
+	<ion-list>
+		<ion-item>
+			<h2>
+				Prime Rib Dip
+			</h2>
+			<div style="position:relative;">
+				<p text-wrap #itemDetails>
+					Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+					<ion-label mode="ios" class="moreButton" *ngIf="isPOverflow" color="secondary" no-margin (click)="toggleDiv()">
+						<span *ngIf="isDivCollapsed == true">
+							... more
+						</span>
+						<span *ngIf="isDivCollapsed == false">
+							less
+						</span>
+						
+					</ion-label>
+				</p>
+			</div>
+		</ion-item>
+		<ion-item>
+			<h2>
+				Sides
+			</h2>
+			<p text-wrap class="textSecondary">
+				House Salad
+			</p>
+			<p text-wrap class="textSecondary">
+				Fresh-Backed Coccacia Bread
+			</p>
+			<ion-icon name="ios-arrow-forward" color="secondary" item-right>
+			</ion-icon>
+		</ion-item>
+		<ion-item>
+			<h2>
+				Size
+			</h2>
+			<p text-wrap class="textSecondary">
+				Large
+			</p>
+			<ion-icon name="ios-arrow-forward" color="secondary" item-right>
+			</ion-icon>
+		</ion-item>
+	</ion-list>
+	<ion-fab bottom right>
+		<button ion-button round mode="ios" color="secondary">
+			Add to order
+		</button>
+	</ion-fab>
+</ion-content>
