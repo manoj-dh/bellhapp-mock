@@ -8,26 +8,33 @@ declare var window : Window;
 })
 export class scrollParent{
 
-    private scrollDelegate : any;
     private defaultMargin : any = 0;
 
     private newMargin = 0;
     private newMarginBottom  = 0;
 
+    private marginHost : any;
+
     constructor(public ele : ElementRef, private renderer : Renderer2){
+    }
+
+    ionViewDidLoad(){
+        console.log("View Loaded event directive");
     }
 
     ngOnInit(){
 
-        let ele = this.ele.nativeElement.getElementsByClassName('scroll-content')[0];
+        console.log("Ng on init called.");
+
+        this.marginHost = this.ele.nativeElement.getElementsByClassName('scroll-content')[0];
+
+        let ele = this.marginHost;
+
         setTimeout(()=>{
             this.defaultMargin = this.ele.nativeElement.getElementsByClassName('scroll-content')[0].offsetTop;
             this.newMargin = this.defaultMargin;
-
-            console.log(this.defaultMargin);
-            console.log(this.newMargin);
-
         },500);
+
         let isBusy = false;
 
         ele.addEventListener('scroll',(event)=>{
@@ -42,7 +49,6 @@ export class scrollParent{
             if(childEle.length > 0){
                 for(let i=0;i<childEle.length;i++){
 
-                    let parentContentHeight = event.target.scrollHeight
                     let parentScrollAmount = event.target.scrollTop;
                     let parentActualHeight = event.target.offsetHeight;
 
@@ -81,7 +87,7 @@ export class scrollParent{
     }
 
     addToTop(ele : Element){
-        let marginHost = this.ele.nativeElement.getElementsByClassName('scroll-content')[0];
+        let marginHost = this.marginHost;
         let oldMargin = this.newMargin;
         let marginToAdd = parseInt(window.getComputedStyle(ele).height); 
         this.newMargin += marginToAdd;
@@ -99,8 +105,7 @@ export class scrollParent{
     }
 
     removeFromTop(ele){
-        let marginHost = this.ele.nativeElement.getElementsByClassName('scroll-content')[0];
-        let oldMargin = this.newMargin;
+        let marginHost = this.marginHost;
         let marginToRemove = parseInt(window.getComputedStyle(ele).height);
         this.newMargin = this.newMargin - marginToRemove;
         this.renderer.setStyle(marginHost,'margin-top',(this.newMargin)+'px');
@@ -114,8 +119,7 @@ export class scrollParent{
     }
 
     removeFromBottom(ele){
-        let marginHost = this.ele.nativeElement.getElementsByClassName('scroll-content')[0];
-        let oldMargin = this.newMarginBottom;
+        let marginHost = this.marginHost;
         let marginToRemove = parseInt(window.getComputedStyle(ele).height);
         this.newMarginBottom = this.newMarginBottom - marginToRemove;
         this.renderer.setStyle(marginHost,'margin-bottom',(this.newMarginBottom)+'px');
@@ -123,7 +127,7 @@ export class scrollParent{
     }
 
     addToBottom(ele){
-        let marginHost = this.ele.nativeElement.getElementsByClassName('scroll-content')[0];
+        let marginHost = this.marginHost;
         let oldMargin = this.newMarginBottom;
         let marginToAdd = parseInt(window.getComputedStyle(ele).height); 
         this.newMarginBottom += marginToAdd;
