@@ -1,11 +1,16 @@
 cartComponent{
 	$blue : #353C3F;
-	.cart-img{
-		text-align: center;
-    	margin: 12% 0;
-		img{
-			max-width: 100%;
-		}
+	// .cart-img{
+	// 	text-align: center;
+    // 	margin: 12% 0;
+	// 	img{
+	// 		max-width: 100%;
+	// 	}
+	// }
+	.cartImg{
+		height: 50%;
+		display: block;
+		margin: 10% auto;
 	}
 	.cart-content{
 		padding: 0 25px;

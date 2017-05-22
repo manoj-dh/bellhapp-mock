@@ -1,0 +1,6 @@
+<ion-content>
+	<img src="./assets/images/logo.png" />
+	<div class="searchHolder">
+		<ion-auto-complete [dataProvider]="findService" (itemSelected)="searchbarChanged()" [options]="{ placeholder : 'Find restaurant', showCancelButton: false }"></ion-auto-complete>
+	</div>
+</ion-content>

@@ -1,5 +1,6 @@
 import { Component, ViewChild, ElementRef, Renderer2 } from '@angular/core';
-import { ViewController } from 'ionic-angular';
+import { ViewController, NavController } from 'ionic-angular';
+import { menuItemCustomPageComponent } from '../MenuItemCustomPage/MenuItemCustomPage';
 
 declare var window : Window;
 
@@ -17,7 +18,8 @@ export class detailComponent{
 
 	constructor(
 		private renderer : Renderer2,
-		private view : ViewController
+		private view : ViewController,
+		private nav : NavController
 	){
 
 	}
@@ -31,7 +33,7 @@ export class detailComponent{
 		this.collapsedHeight = lineHeight * lineToShow ;
 		if(numberOfLines > lineToShow){
 			this.isPOverflow = true;
-			this.toggleDiv();
+			this.toggleDiv(null);
 		}
 	}
 
@@ -39,11 +41,18 @@ export class detailComponent{
 		this.view.dismiss();
 	}
 
-	toggleDiv(){
+	toggleDiv($event : Event){
+		if($event){
+			$event.stopPropagation();
+		}
 		if(this.isDivCollapsed == true){
 			return this.unCollapseP();
 		}
 		return this.collapseP();
+	}
+
+	goToCustomMenuItem(){
+		this.nav.push(menuItemCustomPageComponent);
 	}
 
 	private collapseP(){

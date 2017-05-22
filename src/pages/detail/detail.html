@@ -11,7 +11,7 @@
 			<div style="position:relative;">
 				<p text-wrap #itemDetails>
 					Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-					<ion-label mode="ios" class="moreButton" *ngIf="isPOverflow" color="secondary" no-margin (click)="toggleDiv()">
+					<ion-label mode="ios" class="moreButton" *ngIf="isPOverflow" color="secondary" no-margin (click)="toggleDiv($event)">
 						<span *ngIf="isDivCollapsed == true">
 							... more
 						</span>
@@ -48,7 +48,7 @@
 		</ion-item>
 	</ion-list>
 	<ion-fab bottom right>
-		<button ion-button round mode="ios" color="secondary">
+		<button (click)="goToCustomMenuItem()" ion-button round mode="ios" color="secondary">
 			Add to order
 		</button>
 	</ion-fab>

@@ -1,0 +1,9 @@
+bottomSheetComponent{
+	ion-content{
+		border-top : 1px solid map-get($colors,'primary');
+	}
+	p{
+		color : map-get($colors,'primary') !important;
+		font-size: 1.4em;
+	}
+}

@@ -19,12 +19,9 @@ export class scrollParent{
     }
 
     ionViewDidLoad(){
-        console.log("View Loaded event directive");
     }
 
     ngOnInit(){
-
-        console.log("Ng on init called.");
 
         this.marginHost = this.ele.nativeElement.getElementsByClassName('scroll-content')[0];
 
@@ -40,7 +37,6 @@ export class scrollParent{
         ele.addEventListener('scroll',(event)=>{
 
             if(isBusy == true){
-                console.log("Limit hitted");
                 return false;
             }
             isBusy = true;

@@ -3,13 +3,13 @@ import { Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { signalPageComponent } from '../pages/SignalPage/SignalPage';
+import { welcomePageComponent } from '../pages/WelcomePage/WelcomePage';
  
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = signalPageComponent;
+  rootPage:any = welcomePageComponent;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {

@@ -1,0 +1,29 @@
+welcomePageComponent{
+	$blue : #353C3F;
+	.cartImg{
+		height: 50%;
+		display: block;
+		margin: 10% auto;
+	}
+	.cart-content{
+		padding: 0 25px;
+		h1{			
+			color: map-get($colors,'secondary');
+			font-size: 46px;
+			line-height: 1;
+			margin: 0 0 10px;
+		}
+		p{
+			//color: $blue;
+			font-size: 24px;
+		    line-height: 1.3em;
+		    margin: 0 0 20px;
+			font-weight: 400;
+		}
+	}
+	.bottomSheet{
+		position: fixed;
+		bottom : 0px;
+	}
+	
+}

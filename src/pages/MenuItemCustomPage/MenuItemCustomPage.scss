@@ -1,0 +1,48 @@
+menuItemCustomPageComponent{
+	$light : #888888;
+	.customCard{
+		ion-title{
+			padding-top:8px !important;
+			.toolbar-title{
+				font-size: 1.4em !important;
+				font-weight: 500 !important;
+			}
+		}
+		ion-item{
+			max-height: 2.4em !important;
+			min-height: auto !important;
+			ion-label{
+				color : map-get($colors , 'primary' ) !important;
+			}
+			.m-n{
+				margin : 0px !important;
+			}
+		}
+		ion-radio{
+			margin : 0px 10px 0px 0px !important;
+			.radio-icon{
+				border-color : $light !important;
+			}
+			.radio-inner{
+				width : 6px !important;
+				height : 6px !important;
+				top : 3px !important;
+				left : 3px !important;
+			}
+		}
+		ion-checkbox{
+			margin : 0px 10px 0px 0px !important;
+			.checkbox-icon{
+				border-color : $light !important;
+				background-color:  white !important;
+				.checkbox-inner{
+					border-color : map-get($colors , 'secondary' );
+					width : 4px !important;
+					height : 8px !important;
+					top : 1px !important;
+					left : 4px !important;
+				}
+			}
+		}
+	}
+}

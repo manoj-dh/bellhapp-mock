@@ -1,0 +1,17 @@
+<ion-content (click)="pageClick()">
+    <img class='cartImg' src="assets/images/cartimg.svg" alt="">
+    <div class='cart-content'>
+        <h1 margin-bottom>
+			<b>Hello!</b>
+		</h1>
+        <p>
+			This website is used to view the menu, order items, and message staff during 
+			<ion-note color="secondary">
+				<b>Dine in</b>
+			</ion-note>
+		</p>
+        <button margin-top padding small round outline ion-button color="secondary" (click)="openModal($event)" >
+            Find Restaurant
+        </button>
+    </div>
+</ion-content>

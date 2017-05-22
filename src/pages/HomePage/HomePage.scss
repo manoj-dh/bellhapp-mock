@@ -1,0 +1,63 @@
+homePageComponent{
+
+	$dark : #6f6f6f;
+
+	ion-content{
+		background-image : url('../assets/images/landing-image.jpg');
+		background-size: cover;
+		background-position: center;
+	}
+	img{
+		width: 50vw;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top : 15vw;
+	}
+	.searchHolder{
+		width: 80vw;
+		margin-top : 35vw;
+		margin-right: auto;
+		margin-left: auto;
+		text-align: center;
+		ion-auto-complete{
+			width: 80vw !important;
+			ul{
+				padding : 0px !important;
+				margin-top : -1px !important;
+				box-shadow: none !important;
+				background: none !important;
+				left : auto !important;
+				li{
+					text-align: left !important;
+					border-bottom: none !important;
+					background : white !important;
+					margin : 0px 1px !important;
+					padding-right: 20px !important;
+					color : $dark;
+				}
+				li:nth-child(1){
+					border-top : 1px solid $dark;
+				}
+			}
+			ion-searchbar{
+				input{
+					border-radius: 0px !important;
+					padding : 6px 55px 6px 20px !important;
+				}
+				.searchbar-search-icon{
+					left : auto !important;
+					right: 13px !important;
+				}
+				.searchbar-clear-icon{
+					display: none !important;
+				}
+			}
+			// ion-searchbar.searchbar-has-value{
+			// 	.searchbar-search-icon{
+			// 		display: none !important;			
+			// 	}
+			// }
+		}
+	}	
+}
